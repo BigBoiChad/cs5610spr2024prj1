@@ -1,0 +1,300 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+}
+@media screen and (min-width: 1023px){
+.top-header {
+  position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin: 0%;
+    z-index: 100;
+    background-color:#e2e2e2;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 400px rgba(0, 0, 0, 0.3);
+    
+}
+
+.top-header:hover {
+ 
+    transform: skewX(25deg);
+    box-shadow: 0 0 400px rgba(0, 0, 0, 0.9);
+    transition-delay: 500ms;
+    transition: 500ms;
+    border-radius: 20px;
+    transform: rotateY(0deg) translateY(10px) scale(1);
+}
+
+
+
+.top-header a:hover{
+  text-decoration: underline;
+}
+
+
+.menu,.submenu {
+    margin: 0;
+    padding: 0;
+    list-style:none;
+   
+}
+
+.menu {
+    margin: 0px;
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    
+    
+}
+
+
+.menu > li {
+    transform: skewX(25deg); 
+    float:left;
+    
+}
+
+.current_page{
+  box-shadow: 0 0 100px 5px rgba(0, 0, 0, 0.5);
+}
+
+.top-header .title {
+  opacity: 0;
+
+}
+
+.menu a {
+    display: inline-block;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+}
+
+
+.menu li:hover {
+  
+    background: #e2e2e2;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);  
+}
+
+.menu > li > a {
+    transform: skewX(-40deg);
+    padding: 1em 2em;
+    text-decoration: none; 
+}
+
+
+/* Dropdown Menu */
+.submenu {
+    position: absolute;
+    width: 200px;
+    left: 50%; margin-left: -80px;
+    transform: skewX(-25deg);
+    transform-origin: left top;
+
+  }
+  
+  .submenu li {
+    background-color: #e2e2e2;
+    position: relative;
+    overflow: hidden;
+   		
+  }			
+  
+  
+  #current_sub{
+    background-color: red;
+  
+  }
+  
+  .submenu > li > a {
+    padding: 1em 2em;		
+    font-size: larger;
+  }
+  .submenu > li::after {
+    content: '';
+    position: absolute;
+    top: -125%;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 100px rgba(0, 256, 256, 0.5);			
+  }		
+  
+  
+  /* Odd list will be different direction */
+  .submenu > li:nth-child(odd){
+    
+    transform: skewX(-45deg) translateX(50px);
+  }
+  
+  .submenu > li:nth-child(odd) > a {
+    transform: skewX(25deg);
+  }
+  
+  .submenu > li:nth-child(odd)::after {
+    right: -50%;
+    transform: skewX(-25deg);
+  }				
+  
+  /* Even stuff */
+  .submenu > li:nth-child(even){
+    transform: skewX(25deg) translateX(-50px);
+  }
+  
+  .submenu > li:nth-child(even) > a {
+    transform: skewX(-25deg);
+  }
+  
+  .submenu > li:nth-child(even)::after {
+    left: -50%;
+    transform: skewX(25deg);
+  }
+  
+  /* Show dropdown */
+  .submenu,
+  .submenu li {
+    opacity: 0;
+    visibility: hidden;			
+  }
+  
+  .submenu li {
+    transition: 300ms ease transform;
+  }
+  
+  .menu > li:hover .submenu,
+  .menu > li:hover .submenu li {
+  
+    opacity: 1;
+    visibility: visible;
+    transition: 500ms;
+    border-radius: 0;
+    cursor: pointer;
+    
+  }	
+
+  
+  .menu > li:hover .submenu li:nth-child(even){
+    transform: skewX(25deg) translateX(15px);
+    
+  }
+  
+  .menu > li:hover .submenu li:nth-child(odd){
+    transform: skewX(-25deg) translateX(-15px);	
+  }
+
+  .menu >li .submenu li:hover{
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.9);
+  }
+
+}
+
+@media screen and (max-width: 1023px) {
+    
+.top-header {
+  font-weight: 900;
+  background-color: #e2e2e2;
+  opacity: 0.6;
+  border-radius: 20px;
+  width: 200px;
+  height: 100%;
+  padding-left: 50px;
+  position: fixed;
+  z-index: 100;
+  box-shadow: 0 0 0 5px grey;
+  left: -200px;
+  transition: all 1s;
+  color: #222;
+}
+
+.top-header .title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(270deg);
+  left: -40px; /* Adjust the left position */
+  font-weight: 900;
+  font-size: 15px;
+  z-index: 1; /* Ensure a higher z-index */
+}
+
+.top-header:hover, .top-header:focus {
+  opacity: 0.8;
+  box-shadow: none;
+  transform: translate3d(200px, 0, 0) scale(1.08);
+  animation-timing-function: 2s ease-in;
+}
+
+.top-header .menu {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight:500;
+}
+.top-header .menu ul{
+  margin-top: 25px;
+}
+
+.top-header .menu li {
+
+  padding-bottom: 30px;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.top-header .menu li a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.top-header .menu li a:hover {
+
+  text-decoration: underline;
+  transform: rotateY(0deg) translateY(5px) scale(1.8);
+  transition: 300ms;
+ 
+}
+.top-header  .menu .submenu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out 0.3s;
+  position: absolute;
+  left: 100%; 
+  top: 0;
+  padding-left: 20px; /* Adjusted padding to indicate sub-level */
+}
+
+.top-header .menu li:hover .submenu {
+  display: block;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+
+.current_page > a{
+  font-size: larger;
+  font-weight: 900;
+  transform: scale(1.2);
+}
+#current_sub > a{
+  font-size: larger;
+  font-weight: 900;
+  transform: scale(1.2);
+
+}
+
+}

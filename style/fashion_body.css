@@ -1,0 +1,130 @@
+@import url("compass/css3");
+
+
+.bottom-section{
+  background-image: linear-gradient( 180.5deg,  rgba(46,255,171,1) 12.3%, rgba(252,251,222,0.46) 92% );
+  border-radius: 30px;
+  height: fit-content;
+}
+
+
+.hover-fold {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: hsl(48, 79%, 57%);
+
+  perspective: 1500px;
+
+}
+
+.hover-fold h2 {
+  
+  border-bottom:thick solid #333;
+  margin: 0 40px;
+  padding: 110px 0 2px;
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+}
+
+.hover-fold .top {
+  height: 50%;
+  transition: all 0.5s ease-out;
+  transform: rotateX(0deg);
+  transform-origin: 0 100%;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1;
+}
+
+
+
+.hover-fold .top .face {
+  backface-visibility: hidden;
+  position: absolute;
+
+}
+
+.hover-fold:hover .top {
+  transform: rotateX(-180deg);
+}
+
+
+
+.hover-fold .front {
+  background-color: black;
+  height: 70%;
+  width: 100%;
+}
+
+.hover-fold .back {
+  
+  background: #e8c63d;
+  height: 100%;
+  transform: rotateX(180deg);
+  width: 100%;
+}
+
+.hover-fold .back p {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hover-fold .bottom {
+  background-image: linear-gradient( 358.4deg,  rgba(249,151,119,1) -2.1%, rgba(98,58,162,1) 90% );
+  height: 50%;
+  position: absolute;
+  top: 66%;
+  width: 100%;
+  z-index: 0;
+}
+
+.pic-container {
+  position: relative;
+  width:80%;
+  margin-left: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.pic{
+  padding-top: 3rem;
+  padding-left: 2rem;
+  width: fit-content;
+  
+ 
+}
+
+
+
+.pic > img {
+  margin: 3rem;
+  margin-top: 3rem;
+  width: 200px;
+  object-fit: cover;
+  height: 150px;
+  padding: 1em; 
+  background: white;
+  outline: 100px solid rgba(252,251,222,0.46);
+  outline-offset: -125px;
+  transition: 0.4s;
+  cursor: pointer;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  
+}
+
+img:hover {
+  outline: 2px solid green;
+  border-radius: 50%;
+  clip-path:  none;
+  transform: rotateY(0deg) scale(1.3);
+  background-image: linear-gradient( 105.5deg,  rgba(31,212,248,1) 11%, rgba(218,15,183,1) 74.9% );
+  outline-offset: 10.5px; /* calculated based on --s value */
+
+}
+
