@@ -1,51 +1,103 @@
 <!DOCTYPE html>
-<html>
-<style>
-    .container{
-        
-        display: grid;
-        /*grid-template-columns: 100% 10px 10%;
-        grid-template-rows: 50px 20% 20px;
-        gap: 10px;*/
-        grid-template-areas: 
-        "header header header"
-        "body body body";
-        grid-template-rows: 100% 40px 400px;
-        grid-template-columns: 30% 120px 10%;
-        /*display: flex;
-        border: 1px solid red;
-        flex-direction: row;
-        height: 50px;
-        justify-content: space-around;
-        align-items: center;*/
-    }
-    .headerClass{
-        grid-area: header;
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="../style/nav-bar.css" rel="stylesheet">
+<link href="../style/about_body.css" rel="stylesheet">
+<link href="../style/more_boby.css" rel="stylesheet">
+<link href="../style/footer.css" rel="stylesheet">
 
-    }
-    .sideClass{
-        grid-area: sidebar;
-    }
-    .bodyClass{
-        grid-area: body;
-    }
+<title>
+    More
+</title>
 
-    .rectangle{
-        /*height: 20px;*/
-        border: thin solid magenta;
-        flex-grow: 1;
-    }
-    .bigRectangle{
-        flex-grow: 5;
-    }
+<header class="top-header">
+    <ul class="menu">
+        <div class="title">MENU</div>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about/">About</a></li>
+        <li><a href="../interest/index.html">Interests</a>
+            <ul class="submenu">
+                <li><a href="../interest/TV.html">TV</a></li>
+                <li><a href="../interest/movie.html">Movie</a></li>
+                <li><a href="../interest/fashion.html">Fashion</a></li>
+                <li><a href="../interest/music.html">Music</a></li>
+            </ul>
+        </li>
 
-</style>
-<div class = "container">
-   <div class = "rectangle headerClass">Header Text</div>
-   
-   <div class = "rectangle bodyClass">Body Text</div>
-   <div class = "rectangle bodyClass">Body Text</div>
+        <li class="current_page"><a href="./index.html">More</a>
+            <ul class="submenu">
+                <li><a href="./stability.html">Stability</a></li>
+                <li><a href="./life.html">Life</a></li>
+                <li><a href="./future.html">Future</a></li>
+            </ul>
+        </li>
+    </ul>
+</header>
+
+
+<body>
+    <section class="section top-section">
+      <div class="intro">
+        <p>
+            D i s c o v e r</p>
+      </div>  
+      <div class="content-container content-theme-light">
+        <div class="content-inner">
+        <div class="content-inner">
+            <div class="content-center">
+                <div class="orb">
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section class="section bottom-section">
+      <div class="intro">
+        <p>
+            D i s c o v e r</p>
+      </div>  
+      <div class="content-container content-theme-light">
+        <div class="content-inner">
+        <div class="content-inner">
+            <div class="content-center">
+                <div class="orb2"><div class = "orb"></div>
+            </div>
+        </div>
+      </div>
+    </section> 
+</body>
+
+<div class="footer-container">
+    <footer class="footer">
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link"
+                    href="https://www.instagram.com/alexander.k.tsao/">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/kuncao2000/">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.threads.net/@alexander.k.tsao">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+        </ul>
+
+        <p>&copy;2024 Alexander Tsao | All Rights Reserved</p>
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </div>
-
 
 </html>
